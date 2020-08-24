@@ -18,7 +18,7 @@ const TopMenu = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div class="fixed-top shadow bg-white rounded">
+    <div id="nav-bar" className="fixed-top shadow bg-white">
       <Navbar color="light" light expand="md">
         <NavbarBrand className="ml-4" href="/">
           <img id="logo" src={logo} alt="logo"/>

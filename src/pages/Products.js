@@ -11,42 +11,42 @@ class Products extends Component {
         "id": "95ad242b-03c4-4758-a8e4-cd0b0379bf12",
         "name": "Wine - Casablanca Valley",
         "description": "tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus",
-        "imageUrl": "http://dummyimage.com/300x200.jpg/cc0000/ffffff"
+        "imageUrl": "https://static01.nyt.com/images/2019/11/21/books/best-books-2019/best-books-2019-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
       }, {
         "id": "588502e8-f18e-4eaf-b4f2-34add369eab4",
         "name": "Wine - Barbera Alba Doc 2001",
         "description": "nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim",
-        "imageUrl": "http://dummyimage.com/300x200.jpg/cc0000/ffffff"
+        "imageUrl": "https://static01.nyt.com/images/2019/11/21/books/best-books-2019-02/best-books-2019-02-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
       }, {
         "id": "82c34cee-623d-4e26-ba58-d5d41aee7126",
         "name": "Truffle - Whole Black Peeled",
         "description": "faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti",
-        "imageUrl": "http://dummyimage.com/300x200.jpg/cc0000/ffffff"
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR7H30qLV1bC4uCXv7syHxy6gCkRSqtOID5pQ&usqp=CAU"
       }, {
         "id": "b6595128-8e22-4080-9177-be178dc051de",
         "name": "Wine - Merlot Vina Carmen",
         "description": "eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus",
-        "imageUrl": "http://dummyimage.com/300x200.jpg/ff4444/ffffff"
+        "imageUrl": "https://static01.nyt.com/images/2019/11/21/books/best-books-2019-03/best-books-2019-03-superJumbo.jpg?quality=90&auto=webp"
       }, {
         "id": "a1791500-7096-4d7f-a4fa-e9dde77d9550",
         "name": "Beer - Fruli",
         "description": "vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt",
-        "imageUrl": "http://dummyimage.com/300x200.jpg/ff4444/ffffff"
+        "imageUrl": "https://static01.nyt.com/images/2019/11/21/books/best-books-2019-05/best-books-2019-05-superJumbo.jpg?quality=90&auto=webp"
       }, {
         "id": "c59c4125-17ce-4da6-a6c2-e477344e9335",
         "name": "Spring Roll Veg Mini",
         "description": "consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi",
-        "imageUrl": "http://dummyimage.com/300x200.jpg/cc0000/ffffff"
+        "imageUrl": "https://static01.nyt.com/images/2019/11/21/books/best-books-2019-07/best-books-2019-07-superJumbo.jpg?quality=90&auto=webp"
       }, {
         "id": "6ac8d8e8-0f77-44d3-88ad-f9ebe84edbe9",
         "name": "Appetizer - Veg Assortment",
         "description": "urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam",
-        "imageUrl": "http://dummyimage.com/300x200.jpg/cc0000/ffffff"
+        "imageUrl": "https://static01.nyt.com/images/2019/11/21/books/best-books-2019-08/best-books-2019-08-superJumbo.jpg?quality=90&auto=webp"
       }, {
         "id": "bf6b9ab8-0346-437b-8fce-37546efeb2be",
         "name": "Food Colouring - Pink",
         "description": "consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien",
-        "imageUrl": "http://dummyimage.com/300x200.jpg/dddddd/000000"
+        "imageUrl": "https://static01.nyt.com/images/2019/11/21/books/best-books-2019-10/best-books-2019-10-superJumbo.jpg?quality=90&auto=webp"
       }, {
         "id": "b3aaa7f9-5ee7-4d18-92ce-4cb948078d68",
         "name": "Cheese - Pied De Vents",
@@ -117,20 +117,21 @@ class Products extends Component {
     return(
       <div>
         <Container>
-          <h2>Products</h2>
+          <h2>  Products</h2>
           <Row>
             { products.map(products =>(
-              <Col sm="4">
-                <Card className="mb-4">
-                <CardImg 
-                  top 
-                  width="100%" 
+              <Col className="mb-4" sm="6" md="4" lg="3" xl="3">
+                <Card id="card" className="border-0 h-100">
+                <CardImg
+                  id="card-img" 
+                  top
+                  width="100%"
                   src={products.imageUrl}
                   alt="Card image cap" />
-                <CardBody>
-                  <CardTitle>{products.name}</CardTitle>
+                <CardBody className="d-flex flex-column">
+                  <CardTitle id="card-title">{products.name}</CardTitle>
                   <CardText>{products.description}</CardText>
-                  <Button>Add to cart</Button>
+                  <Button className="mt-auto" color="primary">Add to cart</Button>
                 </CardBody>
                 </Card>
               </Col>

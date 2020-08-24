@@ -7,8 +7,7 @@ import {
 import './App.css';
 import TopMenu from './components/TopMenu'; 
 import Products from './pages/Products'; 
-
-const Index = ()=> <h2>Home</h2>;
+import Index from './pages/Index'; 
 
 function App() {
   return (
