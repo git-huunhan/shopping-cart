@@ -17,6 +17,8 @@ const TopMenu = (props) => {
 
   const toggle = () => setIsOpen(!isOpen);
 
+
+
   return (
     <div id="nav-bar" className="fixed-top shadow bg-white">
       <Navbar color="light" light expand="md">
@@ -26,12 +28,12 @@ const TopMenu = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse className="mr-4" isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            <NavItem>
+            <NavItem className="ml-auto" onClick={toggle}>
               <NavLink>
                 <Link to="/">Home</Link>
               </NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem className="ml-auto" onClick={toggle}>
               <NavLink>
                 <Link to="/products">Products</Link>
               </NavLink>
