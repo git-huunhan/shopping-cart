@@ -5,6 +5,16 @@ body {
 
 #nav-bar a{
   font-weight: 500;
+  color: rgb(75, 75, 75);
+}
+
+#nav-bar a:hover{
+  text-decoration: none;
+  color: #3BBED7;
+}
+
+#nav-bar a:focus{
+  color: #3BBED7;
 }
 
 #card {
